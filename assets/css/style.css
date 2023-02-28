@@ -16,8 +16,15 @@ hr {
   display: none;
 } /* rimuove l'elemento */
 
+.relativa{
+  position: relative;
+}
+
 /* HEADER */
+
 header {
+  z-index: 999;
+  position: sticky;
   background: rgb(0, 160, 198);
   background: linear-gradient(180deg, rgba(0, 160, 198, 1) 0%, rgba(3, 109, 134, 1) 68%);
   text-align: center;
@@ -27,6 +34,7 @@ header {
   box-shadow: 0 3px 3px #444;
   margin-bottom: 1.5em;
   padding: 2em 1.5em;
+  top: 0;
 }
 
 @media screen and (min-width: 800px) {
@@ -99,9 +107,10 @@ main {
 
 section {
   background-color: #e3e3e3;
-  padding: 1.5em 1em;
+  padding: 3em 1em;
   margin-bottom: 2em;
   position: relative;
+
 }
 
 section h2 {
@@ -116,6 +125,20 @@ section h2 {
 
 /* ELEMENTI NEL MAIN - ARTICLE */
 
+#sottolineato{
+display: inline-block;
+word-wrap: break-word;
+}
+
+
+#sottolineatura{
+  position: absolute;
+  bottom: -13px;
+ opacity: 60%;
+  width: 100%;
+  left: 0;
+
+}
 h1 {
   font-size: 2.6rem;
   line-height: 1.2;
@@ -147,6 +170,10 @@ h1 + p {
   h2 {
     font-size: 1.8rem;
     font-weight: 700;
+  }
+  .imgLeft{
+    height: 100px;
+    width: 100px;
   }
 }
 
@@ -187,6 +214,8 @@ h1 + p {
   border: 4px solid #00a0c6;
   outline: 4px solid #a02571;
   padding: 3px;
+  margin-bottom: 0;
+  float: left;
 }
 ul,
 ol {
@@ -326,6 +355,11 @@ aside div p:last-child {
   text-align: right;
 }
 
+section h2{
+  position: absolute;
+  top:-12px;
+}
+
 /* FOOTER */
 footer {
   background: rgb(53, 53, 53);
@@ -386,3 +420,45 @@ footer a {
     display: none;
   }
 }
+@media screen and (max-width: 434px) {
+  #sottolineato{
+    font-size: 2rem;
+  }
+}
+
+
+.icona{
+    display: inline-block;
+     background-color: hsla(0, 0%, 100%, 0.824); 
+    font-size: 30px;
+    text-align: center;
+    box-sizing: content-box;
+    vertical-align: middle;
+    padding: 5px 15px;  
+    position: fixed;
+    right: 0;
+    border-radius:12px ;
+    backdrop-filter: blur(1px) ;
+    border: 3px solid white;
+    
+}
+
+.icona a {
+  color: rgb(26, 130, 171);
+  
+  box-sizing: content-box;
+}
+
+.tasto1{
+  bottom: 145px;
+}
+.tasto2{
+  bottom: 65px;
+}
+.tasto3{
+  bottom: -15px; 
+}
+.tasto3 a{
+  color: orangered;
+}
+
