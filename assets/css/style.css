@@ -462,3 +462,26 @@ footer a {
   color: orangered;
 }
 
+@media  screen and (min-width: 500px) {
+  .tasto1{
+    z-index: 1000;
+    top: 15px;
+    bottom: auto;
+  }
+  .tasto2{
+    top: 90px;
+    z-index: 1000;
+    bottom: auto;
+  }
+}
+
+@media screen and (min-width:1200px){
+  section h2{
+    top:-15px
+  }
+
+  .icona{
+    line-height: normal;
+    width: auto;
+  }
+}
